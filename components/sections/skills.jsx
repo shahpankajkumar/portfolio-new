@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "antd";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Skills() {
@@ -99,7 +99,7 @@ export default function Skills() {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-muted-foreground">{skill.value}%</span>
                     </div>
-                    <Progress value={skill.value} className="h-2" indicatorClassName="bg-gradient-to-r from-primary to-cyan-500" />
+                    <Progress percent={skill.value} showInfo={false} strokeColor="linear-gradient(to right, #3b82f6, #06b6d4)" />
                   </motion.div>
                 ))}
               </motion.div>
@@ -118,7 +118,7 @@ export default function Skills() {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-muted-foreground">{skill.value}%</span>
                     </div>
-                    <Progress value={skill.value} className="h-2" indicatorClassName="bg-gradient-to-r from-violet-500 to-primary" />
+                    <Progress percent={skill.value} showInfo={false} strokeColor="linear-gradient(to right, #8b5cf6, #3b82f6)" />
                   </motion.div>
                 ))}
               </motion.div>
@@ -137,7 +137,7 @@ export default function Skills() {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-muted-foreground">{skill.value}%</span>
                     </div>
-                    <Progress value={skill.value} className="h-2" indicatorClassName="bg-gradient-to-r from-amber-500 to-primary" />
+                    <Progress percent={skill.value} showInfo={false} strokeColor="linear-gradient(to right, #f59e0b, #3b82f6)" />
                   </motion.div>
                 ))}
               </motion.div>
